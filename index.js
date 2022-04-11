@@ -1,7 +1,15 @@
 const TelegrambotApi = require('node-telegram-bot-api')
 const token = '5206997189:AAEQtgDzUXXFr21W2DL-49PMIeEKhp7x00s'
-const bot = new TelegrambotApi(token, {polling: true})
+const bot = new TelegrambotApi(token, {polling: true});
 const chats = {}
+
+/*bot.onText(/\/start/, msg => {
+  bot.sendMessage(msg.chat.id, "Welcome", {
+    "reply_markup": {
+      "keyboard": [["Первый текст", "Второй текст"], ["Третий текст"], ["Четвертый текст"]]
+    }
+  })
+});*/
 const Optionsgame = {
   reply_markup: JSON.stringify({
     inline_keyboard: [
